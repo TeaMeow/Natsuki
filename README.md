@@ -25,7 +25,15 @@
 
 1. 範例
 
-2. 支援的語系
+2. 初始化
+
+  * 時間
+
+  * 語系
+  
+  * 地區 
+
+3. 取得資訊
 
 &nbsp;
 
@@ -34,7 +42,7 @@
 我們假設現在是 **2016/01/01 01:00 AM**。
 
 ```php
-$natsuki = new Natsuki('Asia/Taipei');
+$natsuki = new Natsuki();
 
 $natsuki->now(time())  // 設置現在的時間。
         ->isToday;     // 是否為今天？回傳 True
@@ -44,9 +52,42 @@ $natsuki->relativeTime();
 
 ```
 
-# 支援、設定語系
+&nbsp;
 
-透過 `localize()` 來設定語系，夏希目前支援：
+# 初始化
+
+你可以在一開始就建立夏希，後來才設定一些設置。
+
+```php
+$natsuki = new Nastuki();
+```
+
+&nbsp;
+
+## 時間
+
+透過 `now()` 替夏希明確設定現在的時間，這是**必要的**，
+
+你可以傳入 Unix 時間戳記，或是 YYYY-MM-DD 00:00:00 的資料庫時間。
+
+```php
+->now(time());
+
+/** 或者是資料庫時間 */
+->now('2016-01-01 01:00:00');
+```
+
+&nbsp;
+
+## 語系
+
+透過 `localize()` 來設定語系，這是**必要的**。
+
+```php
+->localize('zh_TW')  // 更改成（台灣）正體中文
+```
+
+但是請注意，目前夏希僅支援：
 
 1. (cs_CZ) Czech 
 2. (de_DE) German 
@@ -63,3 +104,29 @@ $natsuki->relativeTime();
 12. (da_DK) Danish 
 13. (se_SV) Swedish 
 14. (nl_NL) Dutch 
+
+&nbsp;
+
+## 地區
+
+接下來你必須設置時區，這是**必要的**，格式按照 PHP 所[制定的 Timezone 文件](http://php.net/manual/en/timezones.php)，
+
+透過 `timezone()` 設置時區。
+
+```php
+->timezone('Asia/Taipei')  // 設置為台北時區
+```
+
+&nbsp;
+
+# 取得資訊
+
+當一切都設置好了之後，接下來你就可以取得你想要的資訊了。
+
+## 星期
+
+你可以取得下一個星期一的時間，或者某一天是否為星期幾。
+
+```php
+$natsuki->monday;  // 
+```
