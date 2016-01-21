@@ -2,7 +2,7 @@
   <img src="http://imgur.com/ouyRAIE.png"/>
 </p>
 <p align="center">
-  <i>To the time which is not now.</i>
+  <i>To the time where is not now.</i>
 </p>
 
 &nbsp;
