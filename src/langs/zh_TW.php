@@ -1,0 +1,21 @@
+<?php
+return ['justNow' => '現在',
+        'second'  => '1 秒',
+        'seconds' => '%s 秒',
+        'minute'  => '1 分鐘',
+        'minutes' => '%s 分鐘',
+        'hour'    => '1 小時',
+        'hours'   => '%s 小時',
+        'day'     => '1 天',
+        'days'    => '%s 天',
+        'week'    => '1 星期',
+        'weeks'   => '%s 星期',
+        'month'   => '1 個月',
+        'months'  => '%s 個月',
+        'year'    => '1 年',
+        'years'   => '%s 年',
+        'ago'     => '%s前',
+        'fromNow' => '距現在 %s',
+        'after'   => '%s後',
+        'before'  => '%s前'];
+?>

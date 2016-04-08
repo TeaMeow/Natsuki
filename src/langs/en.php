@@ -1,0 +1,21 @@
+<?php
+return ['justNow' => 'just now',
+        'second'  => '1 second',
+        'seconds' => '%s seconds',
+        'minute'  => '1 minute',
+        'minutes' => '%s minutes',
+        'hour'    => '1 hour',
+        'hours'   => '%s hours',
+        'day'     => '1 day',
+        'days'    => '%s days',
+        'week'    => '1 week',
+        'weeks'   => '%s weeks',
+        'month'   => '1 month',
+        'months'  => '% months',
+        'year'    => '1 year',
+        'years'   => '%s years',
+        'ago'     => '%s ago',
+        'fromNow' => '%s from now',
+        'after'   => '%s after',
+        'before'  => '%s before'];
+?>
